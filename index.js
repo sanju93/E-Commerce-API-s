@@ -29,6 +29,8 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use(passport.setAuthenticated);
+
 app.use('/',require('./routes/index'));
 
 app.listen(port,(err) => {

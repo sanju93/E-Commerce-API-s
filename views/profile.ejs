@@ -1,4 +1,32 @@
-<h1> profile page</h1>
-<a href="/users/logout">
-<button class = "btn btn-danger">Logout</button>
-</a>
+
+<div class="container mt-5">
+    <div class="h3 text-center">Add Product</div>
+    <form action="/products/create" method="post">
+    <div class="row my-3">
+        <div class="col">
+            <span class="h4" >Product Name:</span>
+             <input type = "text" placeholder="Product name" class="form form-control my-2" name = "product_name">
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col">
+            <span class="h4">Quantity:</span>
+            <input type = "text" placeholder="enter the product quantity" class="form form-control my-2" name="quantity">
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col">
+            <input type="submit" class="btn btn-success" value = "Add Product">
+            <button class="btn btn-primary" id = "get_product">Get Products</button>
+        </div>
+    
+    </div>
+    </form>
+   
+    <div id="products">
+
+    </div>
+</div>
+
+<script src="/js/product.js"></script>
+

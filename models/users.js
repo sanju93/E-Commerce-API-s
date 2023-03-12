@@ -16,7 +16,12 @@ const userSchema = new mongoose.Schema({
     confirm_password : {
         type : String,
         require : true
-    }
+    },
+    products : [{
+        type : mongoose.Schema.Types.ObjectId,
+        ref : 'Product'
+        }]
+    
 },{timestamps : true});
 
 const User = mongoose.model('User',userSchema);
