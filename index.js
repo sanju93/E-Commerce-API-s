@@ -1,6 +1,12 @@
 const express = require('express');
+require('./config/mongoose');
 const app = express();
 const port = 8000;
+const passport = require('passport');
+require('./config/passport-local-strategy');
+const session = require('express-session');
+const mongostore = require('connect-mongo');
+app.use(express.urlencoded());
 const express_ejs_layout = require('express-ejs-layouts');
 
 
@@ -10,6 +16,18 @@ app.use(express.static('./assets'));
 app.use(express_ejs_layout);
 app.set('layout extractStyles',true);
 app.set('layout extractScripts',true);
+
+
+app.use(session({
+    name : 'e-commerce',
+    secret : 'e-commerce93',
+    cookie : {
+        maxAge : (60 * 60 * 24 * 1000)
+    },
+    store : mongostore.create({mongoUrl : 'mongodb://localhost/E-Commerce'})
+}))
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use('/',require('./routes/index'));
 
