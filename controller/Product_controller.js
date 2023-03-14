@@ -1,5 +1,8 @@
+// database models
 const Product = require('../models/products');
 const User = require('../models/users');
+
+//1. add product
 module.exports.addProduct = async (req,res) => {
     try{
         var product =  await Product.create({
@@ -27,7 +30,7 @@ module.exports.addProduct = async (req,res) => {
 
     }
 }
-
+// 2. get Products
 module.exports.getProducts = async (req,res) => {
    
     var products = await Product.find({});
@@ -35,6 +38,7 @@ module.exports.getProducts = async (req,res) => {
 }
 
 
+//3. Delete product
 module.exports.deleteProducts = async (req,res) => {
     try{
           var product = await Product.findById(req.params.id);
@@ -61,6 +65,8 @@ module.exports.deleteProducts = async (req,res) => {
 
     }
 }
+
+//4. Update Product
 
 module.exports.updateQuantity = async (req,res) => {
     try{

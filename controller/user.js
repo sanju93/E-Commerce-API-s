@@ -1,16 +1,24 @@
+
+// user db
 const User = require('../models/users');
+
+// signin page
 module.exports.signIn = (req,res) => {
     if(req.isAuthenticated()) {
         return res.redirect('/users/profile');
     }
     return res.render('signin');
 }
+
+//signup page
 module.exports.signup = (req,res) => {
     if (req.isAuthenticated()) {
         return res.redirect('/users/profile');
     }
     return res.render('signup');
 }
+
+//profile page
 module.exports.profile = (req,res) => {
     if (req.isAuthenticated()) {
         return res.render('profile');
@@ -25,7 +33,7 @@ module.exports.signInPost = (req,res) => {
     return res.redirect('/users/profile');
 
 }
-
+// creating the user
 module.exports.signUpPost = async (req,res) => {
 
     if (req.body.password !== req.body.confirm_password) {
@@ -71,6 +79,8 @@ module.exports.signUpPost = async (req,res) => {
 
 }
 
+
+// logout the user
 module.exports.logout = (req,res) => {
     req.logout((err) => {
         if (err) {

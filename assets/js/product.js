@@ -32,7 +32,8 @@ product_btn.addEventListener('click',async (e) => {
         update_btn.addEventListener('click',async (e) => {
             
             var id = e.target.getAttribute('id');
-            var res = await fetch(`/products/${id}/update_quantity/?number=${200}`,{method : 'POST'});
+            var quantity = prompt("enter the new Quantity");
+            var res = await fetch(`/products/${id}/update_quantity/?number=${quantity}`,{method : 'POST'});
             var data = await res.json();
             console.log(data);
         })
