@@ -1,11 +1,33 @@
 var product_btn = document.getElementById('get_product');
 var products_div = document.getElementById('products');
+products_div.setAttribute('id','1');
 
+products_div.setAttribute('class','display');
 product_btn.addEventListener('click',async (e) => {
     e.preventDefault();
+ 
     var res = await fetch('/products/products');
     var data = await res.json();
-     for (var i = 0;i<data.length; i++){
+ ;
+    var display = products_div.getAttribute('class');
+    if(display === 'display') {
+      
+
+
+
+        products_div.style.display = "";
+        products_div.setAttribute('class','none');
+    }else{
+        products_div.style.display = 'none';
+        products_div.setAttribute('class','display');
+    }
+
+
+
+  var id = products_div.getAttribute('id');
+  if(id === '1') {
+
+    for (var i = 0;i<data.length; i++){
         var div_row = document.createElement('div')
         div_row.setAttribute('class','row rounded-5 my-3');
         div_row.style.backgroundColor = "lightgrey";
@@ -36,6 +58,7 @@ product_btn.addEventListener('click',async (e) => {
             var res = await fetch(`/products/${id}/update_quantity/?number=${quantity}`,{method : 'POST'});
             var data = await res.json();
             console.log(data);
+            window.location.href = '/users/profile';
         })
 
 
@@ -66,12 +89,27 @@ product_btn.addEventListener('click',async (e) => {
 
         products_div.appendChild(div_row);
 
+        products_div.setAttribute('id','2');
+
 
 
 
 
         
      }
+
+
+  }
+   
+  
+
+    
+      
+    
+    
+
+    
+   
  
     
   
