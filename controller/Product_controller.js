@@ -15,17 +15,17 @@ module.exports.addProduct = async (req,res) => {
             var user = await User.findById(req.user._id);
             user.products.push(product._id);
             user.save();
-            return res.redirect(200,'back');
+            return res.redirect('/users/profile');
 
          }catch(err) {
 
             console.log("Error while updating the user database",err);
-            return res.redirect(500,'back')
+            return res.redirect('back')
 
          }
     }catch(err) {
         console.log("Error occuring while creating the database",err);
-        return res.redirect(500,'back');
+        return res.redirect('back');
 
 
     }
@@ -33,8 +33,14 @@ module.exports.addProduct = async (req,res) => {
 // 2. get Products
 module.exports.getProducts = async (req,res) => {
    
-    var products = await Product.find({});
-    return res.status(200).json(products);
+   // var products = await Product.find({});
+   var user = await User.findById(req.user._id);
+   var products = [];
+            for (var i = 0; i<user.products.length;i++) {
+                var product = await Product.findById(user.products[i]);
+                products.push(product);
+            }
+ return res.status(200).json(products);
 }
 
 

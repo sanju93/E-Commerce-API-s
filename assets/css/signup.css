@@ -1,0 +1,43 @@
+@media only screen and (max-width: 600px){
+
+    #signup-container{
+        margin-top: 10%;
+    }
+
+}
+
+@media only screen and (min-width: 600px){
+
+    
+    #signup-container{
+        margin-top: 10%;
+    }
+
+}
+
+@media only screen and (min-width: 768px){
+
+    
+    #signup-container{
+        margin-top: 6%;
+    }
+
+}
+
+@media only screen and (min-width: 992px){
+
+    
+    #signup-container{
+        margin-top: 4%;
+    }
+
+}
+
+@media only screen and (min-width: 1200px){
+
+    
+    #signup-container{
+        margin-top: 2%;
+    }
+    
+}

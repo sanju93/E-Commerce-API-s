@@ -1,3 +1,161 @@
 body{
     background: linear-gradient(90deg,rgb(203, 19, 19),rgb(29, 29, 209));
  }
+
+
+ @media only screen and (max-width: 600px) {
+    .container-fluid a{
+        margin-top: 2%;
+
+    }
+
+    #signin{
+        margin-right: 4%;
+    }
+  
+
+
+    .container-fluid img{
+        height : 11%;
+        width : 11%;
+        margin-top: 3%;
+        margin-right: 3%;
+    }
+    .container-fluid span{
+        margin-top: 4%;
+        margin-right: 51%;
+        color: white;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    #logout{
+        margin-top: 4%;
+        margin-right: 2%;
+    }
+ }
+
+
+
+ @media only screen and (min-width: 600px) {
+    .container-fluid a{
+        margin-top: 2%;
+
+    }
+
+    #signin{
+        margin-right: 4%;
+    }
+  
+
+
+    .container-fluid img{
+        height : 11%;
+        width : 11%;
+        margin-top: 3%;
+        margin-right: 3%;
+    }
+    .container-fluid span{
+        margin-top: 4%;
+        margin-right: 51%;
+        color: white;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    #logout{
+        margin-top: 4%;
+        margin-right: 2%;
+    }
+ }
+
+
+
+ @media only screen and (min-width: 768px) {    
+    .container-fluid a{
+    margin-top: 2%;
+
+}
+
+#signin{
+    margin-right: 4%;
+}
+
+
+
+.container-fluid img{
+    height : 8%;
+    width : 8%;
+    margin-top: 3%;
+    margin-right: 3%;
+}
+.container-fluid span{
+    margin-top: 4%;
+    margin-right: 70%;
+    color: white;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#logout{
+    margin-top: 4%;
+    margin-right: 2%;
+}}
+
+
+
+ @media only screen and (min-width: 992px) {
+    .container-fluid a{
+        margin-top: 2%;
+
+    }
+
+    #signin{
+        margin-right: 4%;
+    }
+  
+
+
+    .container-fluid img{
+        height : 6%;
+        width : 6%;
+        margin-top: 2%;
+        margin-right: 2%;
+    }
+    .container-fluid span{
+        margin-top: 4%;
+        margin-right: 78%;
+        color: white;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    #logout{
+        margin-top: 4%;
+        margin-right: 2%;
+    }
+ }
+
+
+ @media only screen and (min-width: 1200px) {
+    .container-fluid a{
+        margin-top: 2%;
+
+    }
+  
+
+    #signin{
+        margin-right: 4%;
+    }
+  
+
+
+    .container-fluid img{
+        height : 6%;
+        width : 6%;
+        margin-top: 3%;
+        margin-right: 1%;
+    }
+    .container-fluid span{
+        margin-top: 4%;
+        margin-right: 80%;
+        color: white;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    #logout{
+        margin-top: 4%;
+        margin-right: 2%;
+    }
+ }
