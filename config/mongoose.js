@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/E-Commerce')
+require('dotenv').config();
+mongoose.connect(process.env.MongodbUrl)
 .then(
     () => {
         console.log("Database connected successfully");
