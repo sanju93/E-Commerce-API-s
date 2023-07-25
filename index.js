@@ -6,7 +6,7 @@ const port = 8000 || process.env.port;
 const passport = require('passport');
 require('./config/passport-local-strategy');
 const session = require('express-session');
-const mongostore = require('connect-mongo');
+var mongo_store = require('connect-mongo');
 app.use(express.urlencoded());
 const express_ejs_layout = require('express-ejs-layouts');
 
@@ -25,7 +25,7 @@ app.use(session({
     cookie : {
         maxAge : (60 * 60 * 24 * 1000)
     },
-    store : mongostore.create({mongoUrl : process.env.MongodbUrl})
+    store : mongo_store.create({mongoUrl : process.env.MongodbUrl})
 }))
 app.use(passport.initialize());
 app.use(passport.session());
